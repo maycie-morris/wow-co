@@ -16,9 +16,11 @@ export const ProductScreen = (props) => {
   useEffect(() => {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
+
   const addToCartHandler = () => {
     props.history.push(`/cart/${productId}?qty=${qty}`);
   };
+  
   return (
     <div>
       {loading ? (
@@ -71,13 +73,13 @@ export const ProductScreen = (props) => {
                   </li>
                   <li>
                     <div className="row">
-                      <div>Price</div>
+                      <div>Price:</div>
                       <div className="price">${product.price}</div>
                     </div>
                   </li>
                   <li>
                     <div className="row">
-                      <div>Status</div>
+                      <div>Status:</div>
                       <div>
                         {product.countInStock > 0 ? (
                           <span className="success">In Stock</span>
@@ -91,7 +93,7 @@ export const ProductScreen = (props) => {
                     <>
                       <li>
                         <div className="row">
-                          <div>Qty</div>
+                          <div>Qty:</div>
                           <div>
                             <select
                               value={qty}
