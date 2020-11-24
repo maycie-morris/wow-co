@@ -87,7 +87,7 @@ input:hover,
 select:hover,
 textarea:hover,
 button:hover {
-  border: 0.1rem #404040 solid;
+  border: 0.1rem #a1a1a1 solid;
 }
 button.primary {
   background-color: #203040;
@@ -198,7 +198,7 @@ img.large {
 .success {
   color: #20a020;
 }
-.danger {
+.error {
   color: #a02020;
 }
 .alert {
@@ -251,6 +251,7 @@ img.large {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 /* Checkout Steps */
 .checkout-steps > div {
   border-top: 0.3rem #c0c0c0 solid;
