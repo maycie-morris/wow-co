@@ -9,7 +9,7 @@ function App() {
     <div classNameName="grid-container">
       <header className="row">
         <div>
-          <a className="brand" href="/"><img id="wow_logo" src="/images/wow_logo_white.png" /></a>
+          <a className="brand" href="/"><img id="wow_logo" src="/images/wow_logo_white.png" alt="WOW_co logo" /></a>
         </div>
         <div>
           <a href="/cart">Cart</a>
