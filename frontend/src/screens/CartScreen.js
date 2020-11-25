@@ -22,7 +22,7 @@ export const CartScreen = (props) => {
 
   const removeFromCartHandler = (id) => {
     // delete action
-    // dispatch(removeFromCart(id));
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
@@ -35,7 +35,7 @@ export const CartScreen = (props) => {
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         {cartItems.length === 0 ? (
           <MessageBox>
-            Cart is empty. <Link to="/">Go Shopping</Link>
+            Cart is empty. <Link className="go-shopping" to="/">Go Shopping</Link>
           </MessageBox>
         ) : (
           <ul>

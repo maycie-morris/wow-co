@@ -111,6 +111,10 @@ button.small {
 .back-home{
   color: black;
 }
+
+.go-shopping {
+  color: black;
+}
 /* Header */
 header a {
   color: #ffffff;
@@ -216,8 +220,8 @@ img.large {
   border-radius: 0.5rem;
 }
 .alert-info {
-  color: #2020a0;
-  background-color: #e0e0ff;
+  color: #000000;
+  background-color: #ffffff;
 }
 .alert-danger {
   color: #a02020;
