@@ -1,7 +1,22 @@
-export const data = {
+import bcrypt from 'bcryptjs'
+
+const data = {
+    users: [
+        {
+          name: 'Maycie',
+          email: 'admin@example.com',
+          password: bcrypt.hashSync('1234', 8),
+          isAdmin: true,
+        },
+        {
+          name: 'John',
+          email: 'user@example.com',
+          password: bcrypt.hashSync('1234', 8),
+          isAdmin: false,
+        },
+      ],
     products: [
         {
-            _id: `1`,
             name: `Pumpkin Sweater`,
             category: `Tops`,
             image: `/images/product-1.jpg`,
@@ -13,7 +28,6 @@ export const data = {
             description: `Comfy, cozy sweater`
         },
         {
-            _id: `2`,
             name: `Gangsta Wrapper Shirt`,
             category: `Tops`,
             image: `/images/product-2.jpg`,
@@ -25,7 +39,6 @@ export const data = {
             description: `Perfect shirt for a serious gift wrapper who knows what they're doing`
         },
         {
-            _id: `3`,
             name: `Custom Sign`,
             category: `Decorations`,
             image: `/images/product-3.jpg`,
@@ -37,7 +50,6 @@ export const data = {
             description: `A custom sign for any occasion`
         },
         {
-            _id: `4`,
             name: `Hocus Pocus Mug`,
             category: `Homeware`,
             image: `/images/product-4.jpg`,
@@ -49,7 +61,6 @@ export const data = {
             description: `Perfect for the spooky season!`
         },
         {
-            _id: `5`,
             name: `WOW_co Hat`,
             category: `Hats`,
             image: `/images/product-5.jpg`,
@@ -61,7 +72,6 @@ export const data = {
             description: `Rep WOW_co with the perfect, comfy hat!`
         },
         {
-            _id: `6`,
             name: `Tye-Dye Sweatpants`,
             category: `Bottoms`,
             image: `/images/product-6.jpg`,
@@ -74,3 +84,6 @@ export const data = {
         },
     ]
 }
+
+
+export default data;
