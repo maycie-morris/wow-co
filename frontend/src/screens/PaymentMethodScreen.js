@@ -1,4 +1,3 @@
-import { PromiseProvider } from 'mongoose';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { savePaymentMethod } from '../actions/cartActions';
@@ -50,7 +49,6 @@ export const PaymentMethodScreen = (props) => {
                             value="Stripe"
                             name="paymentMethod"
                             required
-                            checked
                             onChange={ (e) => setPaymentMethod(e.target.value) }
                         />
                         <label htmlFor="stripe">Stripe</label>
