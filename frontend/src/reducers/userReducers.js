@@ -72,4 +72,4 @@ import {
       default:
         return state
     }
-  }
+  };
