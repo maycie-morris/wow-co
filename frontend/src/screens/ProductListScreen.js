@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { createProduct, listProducts } from '../actions/productActions';
+import { createProduct, deleteProduct, listProducts } from '../actions/productActions';
 import { LoadingBox } from '../components/LoadingBox';
 import { MessageBox } from '../components/MessageBox';
-import { Product } from '../components/Product';
-import { PRODUCT_CREATE_RESET } from '../constants/productConstants';
-import { productCreateReducer } from '../reducers/productReducers';
+import { PRODUCT_CREATE_RESET, PRODUCT_DELETE_RESET } from '../constants/productConstants';
 
 
 export const ProductListScreen = (props) => {
@@ -21,6 +19,13 @@ export const ProductListScreen = (props) => {
     product: createdProduct,
   } = productCreate;
 
+  const productDelete = useSelector((state) => state.productDelete);
+  const {
+    loading: loadingDelete,
+    error: errorDelete,
+    success: successDelete,
+  } = productDelete;
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,9 +33,16 @@ export const ProductListScreen = (props) => {
       dispatch({ type: PRODUCT_CREATE_RESET });
       props.history.push(`/product/${createdProduct._id}/edit`);
     }
-  }, [createdProduct, dispatch, props.history, successCreate]);
+    if (successDelete) {
+      dispatch({ type: PRODUCT_DELETE_RESET });
+    }
+    dispatch(listProducts());
+  }, [createdProduct, dispatch, props.history, successCreate, successDelete]);
 
   const deleteHandler = (product) => {
+    if (window.confirm('Are you sure to delete?')) {
+      dispatch(deleteProduct(product._id));
+    }
   };
 
 
@@ -47,6 +59,9 @@ export const ProductListScreen = (props) => {
           Create Product
         </button>
       </div>
+
+      {loadingDelete && <LoadingBox></LoadingBox>}
+      {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
 
       {loadingCreate && <LoadingBox></LoadingBox>}
       {errorCreate && <MessageBox variant="danger">{errorCreate}</MessageBox>}

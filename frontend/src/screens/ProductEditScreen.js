@@ -6,6 +6,7 @@ import { LoadingBox } from '../components/LoadingBox';
 import { MessageBox } from '../components/MessageBox';
 import { PRODUCT_UPDATE_RESET } from '../constants/productConstants';
 
+
 export const ProductEditScreen = (props) => {
         
     const productId = props.match.params.id;
@@ -49,7 +50,6 @@ export const ProductEditScreen = (props) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        // TODO: dispatch update product
         dispatch(
         updateProduct({
             _id: productId,
