@@ -81,17 +81,6 @@ export const ShippingAddressScreen = (props) => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="postalCode">Postal Code</label>
-                    <input
-                        type="text"
-                        id="postalCode"
-                        placeholder="Enter postal code"
-                        value={ postalCode }
-                        onChange={ (e) => setPostalCode(e.target.value) }
-                        required
-                    />
-                </div>
-                <div>
                     <label htmlFor="country">Country</label>
                     <input
                         type="text"
