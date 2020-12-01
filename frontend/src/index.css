@@ -70,9 +70,20 @@ ul {
 li {
   margin-top: 1rem;
 }
+
+textarea {
+  color: black;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 input,
 select,
-textarea,
 button {
   color: rgb(255, 255, 255);
   padding: 1rem;
