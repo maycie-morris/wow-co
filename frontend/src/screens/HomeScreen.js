@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 import { useDispatch, useSelector } from 'react-redux';
 import { Product } from '../components/Product';
 import { LoadingBox } from '../components/LoadingBox';
 import { MessageBox } from '../components/MessageBox';
 import { listProducts } from '../actions/productActions';
+
+import img1 from '../car-imgs/img1.png'
+import img2 from '../car-imgs/img2.png'
 
 export const HomeScreen = () => {
 
@@ -17,6 +22,14 @@ export const HomeScreen = () => {
 
     return (
         <div>
+          <Carousel showArrows autoPlay infiniteLoop showThumbs={false}>
+            <div>
+              <img src= { img1 } />
+            </div>
+            <div>
+              <img src= { img2 } />
+            </div>
+          </Carousel>
           {loading ? (
           <LoadingBox /> 
           ) : error ? (
