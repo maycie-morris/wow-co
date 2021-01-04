@@ -56,6 +56,7 @@ export const MapScreen = (props) => {
   const onConfirm = () => {
     const places = placeRef.current.getPlaces();
     if (places && places.length === 1) {
+      // dispatch select action
       dispatch({
         type: USER_ADDRESS_MAP_CONFIRM,
         payload: {

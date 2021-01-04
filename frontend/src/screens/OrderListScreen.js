@@ -23,7 +23,7 @@ export const OrderListScreen = (props) => {
 
   useEffect(() => {
     dispatch({ type: ORDER_DELETE_RESET });
-    dispatch(listOrders());
+    dispatch(listOrders({}));
   }, [dispatch, successDelete]);
 
 
