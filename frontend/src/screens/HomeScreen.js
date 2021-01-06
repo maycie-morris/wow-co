@@ -9,6 +9,8 @@ import { listProducts } from '../actions/productActions';
 
 import img1 from '../car-imgs/img1.png'
 import img2 from '../car-imgs/img2.png'
+import img3 from '../car-imgs/img3.png'
+import img4 from '../car-imgs/img4.png'
 
 export const HomeScreen = () => {
 
@@ -28,6 +30,12 @@ export const HomeScreen = () => {
             </div>
             <div>
               <img src= { img2 } />
+            </div>
+            <div>
+              <img src= { img3 } />
+            </div>
+            <div>
+              <img src= { img4 } />
             </div>
           </Carousel>
           {loading ? (

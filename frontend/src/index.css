@@ -36,7 +36,6 @@ header {
 
 main {
   grid-area: main;
-  padding: 1rem;
 }
 
 footer {
@@ -352,7 +351,8 @@ button.close-sidebar {
 /* Carousel */
 
 .carousel .slide img {
-  max-width: 35rem;
+  height: 100%;
+  width: auto;
 }
 
 /* Search */
