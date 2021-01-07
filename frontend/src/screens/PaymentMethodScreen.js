@@ -45,6 +45,19 @@ export const PaymentMethodScreen = (props) => {
                     <div>
                         <input
                             type="radio"
+                            id="paypal"
+                            value="Paypal"
+                            name="paymentMethod"
+                            required
+                            onChange={ (e) => setPaymentMethod(e.target.value) }
+                        />
+                        <label htmlFor="paypal">Credit / Debit Card</label>
+                    </div>
+                </div>
+                {/* <div>
+                    <div>
+                        <input
+                            type="radio"
                             id="stripe"
                             value="Stripe"
                             name="paymentMethod"
@@ -53,7 +66,7 @@ export const PaymentMethodScreen = (props) => {
                         />
                         <label htmlFor="stripe">Stripe</label>
                     </div>
-                </div>
+                </div> */}
                 <div>
                     <button className="primary" type="submit">Continue</button>
                 </div>

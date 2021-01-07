@@ -7,6 +7,7 @@ import { LoadingBox } from '../components/LoadingBox';
 import { MessageBox } from '../components/MessageBox';
 import { listProducts } from '../actions/productActions';
 
+
 import img1 from '../car-imgs/img1.png'
 import img2 from '../car-imgs/img2.png'
 import img3 from '../car-imgs/img3.png'
@@ -14,7 +15,7 @@ import img4 from '../car-imgs/img4.png'
 
 export const HomeScreen = () => {
 
-    
+
 
     const dispatch = useDispatch();
     const productList = useSelector( state => state.productList );
@@ -28,18 +29,19 @@ export const HomeScreen = () => {
         <div>
           <Carousel showArrows autoPlay infiniteLoop showThumbs={false}>
             <div>
-              <img src= { img1 } />
+              <img className="car-img" src= { img1 } />
             </div>
             <div>
-              <img src= { img2 } />
+              <img className="car-img" src= { img2 } />
             </div>
             <div>
-              <img src= { img3 } />
+              <img className="car-img" src= { img3 } />
             </div>
             <div>
-              <img src= { img4 } />
+              <img className="car-img" src= { img4 } />
             </div>
           </Carousel>
+          <h2 className="home-h2">Shop our products</h2>
           {loading ? (
           <LoadingBox /> 
           ) : error ? (

@@ -57,7 +57,7 @@ function App() {
     <BrowserRouter>
     <div classNameName="grid-container">
       <header className="row">
-        <div>
+        <div className="logo-menu">
           <button
                 type="button"
                 className="open-sidebar"
@@ -65,7 +65,7 @@ function App() {
               >
                 <i className="fa fa-bars"></i>
           </button>
-          <Link className="brand" to="/"><img id="wow_logo" src="/images/wow_logo_white.png" alt="WOW_co logo" /></Link>
+          <Link className="brand" to="/"><img id="wow_logo" src="/images/wow_logo_dark.png" alt="WOW_co logo" /></Link>
         </div>
         <div>
             <Route
