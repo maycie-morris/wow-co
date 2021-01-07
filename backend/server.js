@@ -53,7 +53,7 @@ app.use((err, req, res, next) => {
     })
 })
 
-const port = config.PORT || 5000
+const port = config.PORT || 3000
 app.listen(port, () => {
     console.log(`Serve at http://localhost:${port}`)
 })
