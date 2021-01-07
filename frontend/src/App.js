@@ -26,32 +26,41 @@ import { listProductCategories } from './actions/productActions';
 import { LoadingBox } from './components/LoadingBox';
 import { MessageBox } from './components/MessageBox';
 import { MapScreen } from './screens/MapScreen';
+import { useDarkMode }  from './hooks/useDarkMode'
 
 function App() {
 
-  const cart = useSelector(state => state.cart);
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
-  const { cartItems } = cart;
+    const [darkMode, setDarkMode] = useDarkMode(true)
 
-  const userSignin = useSelector(state => state.userSignin);
-  const { userInfo } = userSignin;
+    const cart = useSelector(state => state.cart);
+    const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+    const { cartItems } = cart;
 
-  const dispatch = useDispatch();
+    const userSignin = useSelector(state => state.userSignin);
+    const { userInfo } = userSignin;
 
-  const signoutHandler = () => {
-    dispatch(signout());
-  };
+    const dispatch = useDispatch();
 
+    const signoutHandler = () => {
+        dispatch(signout());
+    };
 
-  const productCategoryList = useSelector((state) => state.productCategoryList);
-  const {
-    loading: loadingCategories,
-    error: errorCategories,
-    categories,
-  } = productCategoryList;
-  useEffect(() => {
-    dispatch(listProductCategories());
-  }, [dispatch]);
+    const toggleDarkMode = (e) => {
+        e.preventDefault();
+        document.body.classList.toggle("dark-mode");
+        setDarkMode(!darkMode);
+      };
+
+    const productCategoryList = useSelector((state) => state.productCategoryList);
+    const {
+        loading: loadingCategories,
+        error: errorCategories,
+        categories,
+    } = productCategoryList;
+
+    useEffect(() => {
+        dispatch(listProductCategories());
+    }, [dispatch]);
 
   return (
     <BrowserRouter>
@@ -74,7 +83,13 @@ function App() {
               )}
             ></Route>
           </div>
-        <div>
+          <div className="dark-mode__toggle">
+                <div
+                  onClick={toggleDarkMode}
+                  className={darkMode ? "toggle toggled" : "toggle"}
+                />
+          </div>
+        <div className="links">
           <Link to="/cart">Cart
           { cartItems.length > 0 && (
             <span className="badge"> { cartItems.length } </span>

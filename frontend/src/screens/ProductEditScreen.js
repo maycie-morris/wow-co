@@ -190,7 +190,7 @@ export const ProductEditScreen = (props) => {
                 </div>
                 <div>
                     <label></label>
-                    <button className="primary" type="submit">
+                    <button className="update" type="submit">
                         Update
                     </button>
                 </div>

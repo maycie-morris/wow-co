@@ -120,6 +120,12 @@ button {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.form {
+  border: 1px solid black;
+  padding: 2%;
+  margin-bottom: 5rem;
+}
+
 .form input {
   color: black;
 }
@@ -511,3 +517,77 @@ button.close-sidebar {
 .pagination a.active {
   font-weight: bold;
 } */
+
+
+/* DARK MODE */
+
+
+.dark-mode__toggle {
+  background: #273441;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: #eeeeee;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color: rgb(255, 255, 255);
+  background-color: #161727;
+
+}
+
+.dark-mode header {
+  color: rgb(255, 255, 255);
+  background-color: #161727;
+}
+
+.dark-mode header a {
+  color: rgb(255, 255, 255);
+}
+
+.dark-mode .home-h2 {
+  color: rgb(255, 255, 255);
+}
+
+.dark-mode .card {
+  border: 0.1rem #000000 solid;
+  background-color: #adadad;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .search input {
+    justify-content: center;
+    width: 20rem;
+  }
+
+  .links {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 45%;
+  }
+
+  .carousel {
+    height: 20rem;
+  }
+
+  .home-h2 {
+    font-size: 2.3rem;
+  }
+
+}
