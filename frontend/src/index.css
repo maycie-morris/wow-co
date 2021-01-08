@@ -575,6 +575,17 @@ button.close-sidebar {
   color: rgb(255, 255, 255);
 }
 
+/* DROPDOWN */
+
+.dropdown-content {
+  color: #ffffff;
+  background-color: #1a1a1a;
+}
+
+.dropdown-content a {
+  color: #ffffff;
+}
+
 
 /* RESPONSIVE DESIGN */
 
