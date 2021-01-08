@@ -582,21 +582,35 @@ button.close-sidebar {
 
   /* HEADER */
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   a.brand {
     font-size: 6rem;
+    margin-left: 13%;
+  }
+
+  .logo-menu {
+    width: 100%;
+    text-align: center;
   }
 
   .links {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 45%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    text-align: center;
   }
 
     /* SEARCH */
 
-    .search input {
-      width: 11rem;
-      margin-left: 5.7rem;
+    .search {
+      width: 100%;
+      margin-top: 5%;
     }
 
   /* CAROUSEL */
@@ -609,6 +623,13 @@ button.close-sidebar {
 
   .home-h2 {
     font-size: 2.3rem;
+  }
+
+  /* DARK MODE TOGGLE */
+
+  .dark-mode__toggle {
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
 }

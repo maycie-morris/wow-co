@@ -64,7 +64,8 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div classNameName="grid-container">
+    <div>
+      <div className="container">
         <div className="dark-mode__toggle">
             <div
                 onClick={toggleDarkMode}
@@ -140,6 +141,7 @@ function App() {
             )}
         </div>
       </header>
+      </div>
       <aside className={sidebarIsOpen ? 'open' : ''}>
           <ul className="categories">
             <li>
