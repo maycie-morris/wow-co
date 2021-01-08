@@ -83,7 +83,7 @@ function App() {
           </button>
           <Link className="brand" to="/">W.O.W_co</Link>
         </div>
-        <div>
+        <div className="search-bar">
             <Route
               render={({ history }) => (
                 <SearchBox history={history}></SearchBox>

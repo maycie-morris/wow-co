@@ -636,3 +636,19 @@ button.close-sidebar {
   }
 
 }
+
+
+@media only screen and (min-width: 428px) and (orientation: portrait) { 
+
+  a.brand {
+    font-size: 6rem;
+    margin-left: 18%;
+  }
+
+  .search-bar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+}
