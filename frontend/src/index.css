@@ -611,6 +611,9 @@ button.close-sidebar {
     .search {
       width: 100%;
       margin-top: 5%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
     }
 
   /* CAROUSEL */
