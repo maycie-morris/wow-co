@@ -577,12 +577,11 @@ button.close-sidebar {
 
 /* DROPDOWN */
 
-.dropdown-content {
-  color: #ffffff;
-  background-color: #1a1a1a;
+.dark-mode .dropdown-content {
+  background-color: #131318;
 }
 
-.dropdown-content a {
+.dark-mode .dropdown-content a {
   color: #ffffff;
 }
 
