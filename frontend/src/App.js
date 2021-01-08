@@ -65,6 +65,12 @@ function App() {
   return (
     <BrowserRouter>
     <div classNameName="grid-container">
+        <div className="dark-mode__toggle">
+            <div
+                onClick={toggleDarkMode}
+                className={darkMode ? "toggle toggled" : "toggle"}
+            />
+        </div>
       <header className="row">
         <div className="logo-menu">
           <button
@@ -74,7 +80,7 @@ function App() {
               >
                 <i className="fa fa-bars"></i>
           </button>
-          <Link className="brand" to="/"><img id="wow_logo" src="/images/wow_logo_dark.png" alt="WOW_co logo" /></Link>
+          <Link className="brand" to="/">W.O.W_co</Link>
         </div>
         <div>
             <Route
@@ -82,12 +88,6 @@ function App() {
                 <SearchBox history={history}></SearchBox>
               )}
             ></Route>
-          </div>
-          <div className="dark-mode__toggle">
-                <div
-                  onClick={toggleDarkMode}
-                  className={darkMode ? "toggle toggled" : "toggle"}
-                />
           </div>
         <div className="links">
           <Link to="/cart">Cart

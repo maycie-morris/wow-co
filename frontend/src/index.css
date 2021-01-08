@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow:wght@100&family=Reenie+Beanie&display=swap');
 
 html {
   font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
@@ -12,11 +12,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-#wow_logo {
-  height: 10rem;
-  margin-left: 5%;
 }
 
 .logo-menu {
@@ -176,9 +171,11 @@ header a {
 }
 
 a.brand {
-  color: #ffffff;
-  font-size: 3rem;
+  color: #101124;
+  font-size: 8.5rem;
   font-weight: bold;
+  font-family: 'Reenie Beanie', cursive;
+  margin-left: 3rem;
 }
 
 .badge {
@@ -447,13 +444,6 @@ button.close-sidebar {
   height: 55rem;
 }
 
-/* .carousel .slide img {
-  height: 100%;
-  background-size: auto;
-  background-position: center bottom;
-  width: auto;
-} */
-
 /* Search */
 
 .search button {
@@ -502,22 +492,6 @@ button.close-sidebar {
   border-left: 0;
 }
 
-/* Pagination */
-
-/* .pagination a {
-  padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-  border: 0.1rem #a4a4a4 solid;
-  font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.pagination a.active {
-  font-weight: bold;
-} */
-
 
 /* DARK MODE */
 
@@ -529,6 +503,8 @@ button.close-sidebar {
   height: 20px;
   position: relative;
   width: 40px;
+  margin:50px ;
+  float:right;
 }
 
 .toggle {
@@ -547,33 +523,67 @@ button.close-sidebar {
 
 .dark-mode {
   color: rgb(255, 255, 255);
-  background-color: #161727;
+  background-color: #131318;
 
 }
+
+/* DARK MODE PAGE CHANGES */
+
+/* LAYOUT */
 
 .dark-mode header {
   color: rgb(255, 255, 255);
-  background-color: #161727;
+  background-color: #131318;
 }
+
+/* COMMON */
+
+.dark-mode h2 {
+  color: #ffffff;
+}
+
+.dark-mode .rating .reviews {
+  color: #a1a1a1;
+}
+
+/* HEADER */
 
 .dark-mode header a {
   color: rgb(255, 255, 255);
 }
 
+.dark-mode a.brand {
+  color: #ffffff;
+}
+
+/* ASIDE */
+
+.dark-mode button.open-sidebar {
+  color: #ffffff;
+}
+
+/* CARD */
+
+.dark-mode .card {
+  border: 0.1rem #292929 solid;
+  background-color: #181820;
+}
+
+/* HOMESCREEN SPECIFIC */
+
 .dark-mode .home-h2 {
   color: rgb(255, 255, 255);
 }
 
-.dark-mode .card {
-  border: 0.1rem #000000 solid;
-  background-color: #adadad;
-}
+
+/* RESPONSIVE DESIGN */
 
 @media only screen and (max-width: 768px) {
 
-  .search input {
-    justify-content: center;
-    width: 20rem;
+  /* HEADER */
+
+  a.brand {
+    font-size: 6rem;
   }
 
   .links {
@@ -582,9 +592,20 @@ button.close-sidebar {
     margin-left: 45%;
   }
 
+    /* SEARCH */
+
+    .search input {
+      width: 11rem;
+      margin-left: 5.7rem;
+    }
+
+  /* CAROUSEL */
+
   .carousel {
     height: 20rem;
   }
+
+  /* HOMESCREEN SPECIFIC */
 
   .home-h2 {
     font-size: 2.3rem;
