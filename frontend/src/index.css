@@ -157,6 +157,10 @@ button.small {
   color: black;
 }
 
+.back-button {
+  text-decoration: none;
+}
+
 .go-shopping {
   color: black;
 }
@@ -582,6 +586,34 @@ button.close-sidebar {
 }
 
 .dark-mode .dropdown-content a {
+  color: #ffffff;
+}
+
+.dark-mode .cart-item {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.dark-mode .back-button {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.dark-mode input {
+  background-color: #e6e6e6;
+}
+
+.dark-mode .checkout-steps > div.active {
+  border-top-color: #c9b22f;
+  color: #879099;
+}
+
+.dark-mode .table tbody tr:nth-of-type(odd) {
+  background-color: #1f1f1f;
+}
+
+.dark-mode .alert-info {
+  background-color: #131318;
   color: #ffffff;
 }
 

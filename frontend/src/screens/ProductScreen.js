@@ -10,6 +10,7 @@ import { PRODUCT_REVIEW_CREATE_RESET } from '../constants/productConstants';
 export const ProductScreen = (props) => {
   const dispatch = useDispatch();
   const productId = props.match.params.id;
+  const [size, setSize] = useState('')
   const [qty, setQty] = useState(1);
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
@@ -59,7 +60,7 @@ export const ProductScreen = (props) => {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
-          <Link to="/">Back to result</Link>
+          <Link className="back-button" to="/">Back to result</Link>
           <div className="row top">
             <div className="col-2">
               <img
@@ -121,6 +122,24 @@ export const ProductScreen = (props) => {
                   </li>
                   {product.countInStock > 0 && (
                     <>
+                      {/* <li>
+                        <div className="row">
+                          <div>Size:</div>
+                          <div>
+                            <select
+                              value={size}
+                              onChange={(e) => setSize(e.target.value)}
+                            >
+                               <option value="Default">--Select A Size--</option>
+                               <option value="XS">XS</option>
+                               <option value="S">S</option>
+                               <option value="M">M</option>
+                               <option value="L">L</option>
+                               <option value="XL">XL</option>
+                            </select>
+                          </div>
+                        </div>
+                      </li> */}
                       <li>
                         <div className="row">
                           <div>Qty:</div>
@@ -157,7 +176,7 @@ export const ProductScreen = (props) => {
           <div>
             <h2 id="reviews">Reviews</h2>
             {product.reviews.length === 0 && (
-              <MessageBox>There is no review</MessageBox>
+              <MessageBox>Be the first to leave a review!</MessageBox>
             )}
             <ul>
               {product.reviews.map((review) => (
